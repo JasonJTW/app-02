@@ -1,4 +1,4 @@
-# ai-starter
+# app-02
 
 Next.js (web) + Express (server), npm workspaces.
 
