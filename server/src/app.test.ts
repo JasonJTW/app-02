@@ -10,3 +10,12 @@ describe("GET /health", () => {
     expect(res.body).toEqual({ ok: true });
   });
 });
+
+describe("unknown route", () => {
+  it("returns a JSON 404", async () => {
+    const res = await request(app).get("/does-not-exist");
+
+    expect(res.status).toBe(404);
+    expect(res.body).toEqual({ error: "Not found" });
+  });
+});
